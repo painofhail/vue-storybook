@@ -1,11 +1,11 @@
-import Button from '../components/App/Button/Button.vue';
+import Button from '../components/UI-kit/Button/Button';
 
 const iconNames = ['gear', 'close', 'filter'];
 
 export default {
 	component: Button,
-  title: 'Контролы/Button',
-  argTypes: {
+	title: 'Контролы/Button',
+	argTypes: {
 		title: {
 			name: 'Текст внутри кнопки',
 			type: { name: 'string', required: false },
@@ -29,11 +29,11 @@ export default {
 				type: { summary: 'Альтернативная' },
 				defaultValue: { summary: 'false' },
 			},
-      control: {
+			control: {
 				type: 'boolean'
 			}
 		},
-    size: {
+		size: {
 			name: 'Размер кнопки',
 			type: { name: 'string', required: false },
 			description: 'Размеры: ',
@@ -56,7 +56,7 @@ export default {
 				type: { summary: 'true | false' },
 				defaultValue: { summary: 'false' },
 			},
-      control: {
+			control: {
 				type: 'boolean'
 			}
 		},
@@ -104,13 +104,13 @@ export default {
 		onClick: {
 			action: 'clicked'
 		}
-  }
+	}
 };
 
 const Template = (args, { argTypes }) => ({
 	components: { Button },
-  props: Object.keys(argTypes),
-  template: '<Button @click="onClick" v-bind="$props" />',
+	props: Object.keys(argTypes),
+	template: '<Button @click="onClick" v-bind="$props" />',
 });
 
 export const Primary = Template.bind({});

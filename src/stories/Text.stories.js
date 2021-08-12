@@ -1,9 +1,9 @@
-import Wtext from '../components/App/Wtext/Wtext.vue';
+import Wtext from '../components/UI-kit/WText/WText';
 
 export default {
 	component: Wtext,
-  title: 'Элементы/WText',
-  argTypes: {
+	title: 'Элементы/WText',
+	argTypes: {
 		title: {
 			name: 'Текст',
 			type: { name: 'string', required: false },
@@ -32,7 +32,7 @@ export default {
 				options: [ 'default', 'secondary', 'danger' ]
 			}
 		},
-    size: {
+		size: {
 			name: 'Размер',
 			type: { name: 'string', required: false },
 			description: 'Размеры: ',
@@ -73,13 +73,13 @@ export default {
 				type: 'color'
 			}
 		}
-  }
+	}
 };
 
 const Template = (args, { argTypes }) => ({
 	components: { Wtext },
-  props: Object.keys(argTypes),
-  template: '<Wtext v-bind="$props" />',
+	props: Object.keys(argTypes),
+	template: '<Wtext v-bind="$props" />',
 });
 
 export const Default = Template.bind({});

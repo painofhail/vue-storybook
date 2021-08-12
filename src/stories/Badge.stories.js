@@ -1,9 +1,9 @@
-import Badge from '../components/App/Badge/Badge.vue';
+import Badge from '../components/UI-kit/Badge/Badge';
 
 export default {
 	component: Badge,
-  title: 'Элементы/Badge',
-  argTypes: {
+	title: 'Элементы/Badge',
+	argTypes: {
 		title: {
 			name: 'Текст внутри тэга',
 			type: { name: 'string', required: false },
@@ -32,7 +32,7 @@ export default {
 				options: [ 'primary', 'secondary', 'danger', 'warning' ]
 			}
 		},
-    size: {
+		size: {
 			name: 'Размер тэга',
 			type: { name: 'string', required: false },
 			description: 'Размеры: ',
@@ -59,13 +59,13 @@ export default {
 				type: 'color'
 			}
 		}
-  }
+	}
 };
 
 const Template = (args, { argTypes }) => ({
 	components: { Badge },
-  props: Object.keys(argTypes),
-  template: '<Badge v-bind="$props" />',
+	props: Object.keys(argTypes),
+	template: '<Badge v-bind="$props" />',
 });
 
 export const Primary = Template.bind({});

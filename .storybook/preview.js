@@ -1,21 +1,22 @@
-// import "../src/styles/app.scss";
+// Чтобы были все стили в storybook
+import "../dist/styles/style.min.css";
 
 // Global parameters
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+	actions: { argTypesRegex: "^on[A-Z].*" },
+	controls: {
+		matchers: {
+			color: /(background|color)$/i,
+			date: /Date$/,
+		},
+	},
 	backgrounds: {
-    values: [
-      { name: 'red', value: '#f00' },
-      { name: 'green', value: '#0f0' },
+		values: [
+			{ name: 'red', value: '#f00' },
+			{ name: 'green', value: '#0f0' },
 			{ name: 'blue', value: '#00f' },
-    ],
-  },
+		],
+	},
 	jsx: {
 		showDefaultProps: false
 	}
@@ -23,6 +24,6 @@ export const parameters = {
 
 // Global decorators
 export const decorators = [(story) => ({
-  components: { story },
-  template: '<div style="margin: 1em;"><story /></div>'
+	components: { story },
+	template: '<div style="margin: 1em;"><story /></div>'
 })];

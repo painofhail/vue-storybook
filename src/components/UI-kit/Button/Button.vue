@@ -1,10 +1,10 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="click">
-		<SvgIcon v-if="prependIcon" :name="prependIcon" :fill="iColor" class="mr_8" />
+	<button :class="classes" :disabled="disabled" @click="click">
+	<SvgIcon v-if="prependIcon" :name="prependIcon" :fill="iColor" class="mr_8" />
 
-		<span>{{ title }}</span>
+	<span>{{ title }}</span>
 
-		<SvgIcon v-if="appendIcon" :name="appendIcon" :fill="iColor" class="ml_8" />
+	<SvgIcon v-if="appendIcon" :name="appendIcon" :fill="iColor" class="ml_8" />
 	</button>
 </template>
 
@@ -17,7 +17,7 @@
 		// 	SvgIcon
 		// },
 		props: {
-			// Текст кнопки
+		// Текст кнопки
 			title: {
 				type: String,
 				required: false,
@@ -33,7 +33,7 @@
 			size: {
 				type: String,
 				required: false,
-				default: 'default'	// small | default | big
+				default: 'medium'	// small | default | big
 			},
 			// Заблокированная кнопка
 			disabled: {
@@ -54,7 +54,7 @@
 				default: null
 			},
 			// Цвет иконки
-			iconColor: {
+				iconColor: {
 				type: String,
 				required: false,
 				default: null
@@ -63,10 +63,10 @@
 		computed: {
 			classes() {
 				return {
-					'w-btn2': true,
-					'w-btn2_primary': !this.$props.secondary,
-					'w-btn2_secondary': this.$props.secondary,
-					[`w-btn2_${this.$props.size}`]: true,
+					'wf-button': true,
+					'wf-button--primary': !this.$props.secondary,
+					'wf-button--secondary': this.$props.secondary,
+					[`wf-button--${this.$props.size}`]: true,
 					'disabled' : this.$props.disabled
 				}
 			},

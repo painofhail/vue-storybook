@@ -6,10 +6,12 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "editorconfig-checker --exclude node_modules --exclude .git"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "editorconfig-checker": "^4.0.2",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",

@@ -1,11 +1,11 @@
 <template>
-  <span :class="classes" :style="style">{{ title }}</span>
+	<span :class="classes" :style="style">{{ title }}</span>
 </template>
 
 <script>
 
 	export default {
-		name: 'Wtext',
+		name: 'WText',
 		props: {
 			// Текст
 			title: {
@@ -47,10 +47,10 @@
 				}
 			},
 			style() {
-        return {
-          color: this.color,
-        };
-      },
+				return {
+					color: this.color,
+				};
+			},
 		}
 	}
 </script>

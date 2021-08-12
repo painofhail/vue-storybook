@@ -1,5 +1,7 @@
 # vue-storybook
 
+Разбираюсь в функционале Storybook
+
 ## Project setup
 ```
 npm install
@@ -15,5 +17,12 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Run the storybook
+```
+npm run storybook
+```
+
+### Run tests
+```
+npm test
+```

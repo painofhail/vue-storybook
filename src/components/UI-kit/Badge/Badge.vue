@@ -1,5 +1,5 @@
 <template>
-  <span :class="classes" :style="style">{{ title }}</span>
+	<span :class="classes" :style="style">{{ title }}</span>
 </template>
 
 <script>
@@ -7,7 +7,7 @@
 	export default {
 		name: 'Badge',
 		props: {
-			// Текст тэга
+		// Текст тэга
 			title: {
 				type: String,
 				required: false,
@@ -26,7 +26,7 @@
 				default: 'default'	// small | default | big
 			},
 			// Цвет тэга
-			bgColor: {
+				bgColor: {
 				type: String,
 				required: false,
 				default: null
@@ -41,10 +41,11 @@
 				}
 			},
 			style() {
-        return {
-          backgroundColor: this.bgColor,
-        };
-      },
+				return {
+					backgroundColor: this.bgColor,
+				};
+			},
 		}
 	}
+
 </script>
