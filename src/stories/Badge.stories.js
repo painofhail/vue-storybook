@@ -8,7 +8,6 @@ export default {
 			name: 'Текст внутри тэга',
 			type: { name: 'string', required: false },
 			description: 'Текст',
-			defaultValue: 'Текст',
 			table: {
 				category: 'Внутреннее содержимое',
 				type: { summary: null },
@@ -48,7 +47,7 @@ export default {
 		},
 		bgColor: {
 			name: 'Цвет фона',
-			type: { name: 'color', required: false },
+			type: { name: 'string', required: false },
 			description: 'Цвет',
 			table: {
 				category: 'Внутреннее содержимое',

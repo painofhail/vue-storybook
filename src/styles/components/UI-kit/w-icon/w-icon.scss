@@ -1,0 +1,26 @@
+.w-icon {
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	fill: currentColor;
+	stroke: currentColor;
+	display: inline-block;
+}
+
+.w-icon__padding{
+	padding: 4px;
+	background-color: #F9FAFC;
+	border-radius: 2px;
+	transition: padding .25s;
+
+	&:hover{
+		padding: 0;
+	}
+}
+
+.w-icon__color{
+	border-radius: 50%;
+	display: inline-block;
+}
+
+@import '_size/_w-icon_size.scss';

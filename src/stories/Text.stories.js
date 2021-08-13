@@ -8,7 +8,6 @@ export default {
 			name: 'Текст',
 			type: { name: 'string', required: false },
 			description: 'Текст',
-			defaultValue: 'Текст',
 			table: {
 				category: 'Внешний вид',
 				type: { summary: null },
@@ -62,7 +61,7 @@ export default {
 		},
 		color: {
 			name: 'Цвет текста',
-			type: { name: 'color', required: false },
+			type: { name: 'string', required: false },
 			description: 'Цвет',
 			table: {
 				category: 'Внешний вид',

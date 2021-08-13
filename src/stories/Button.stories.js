@@ -1,24 +1,21 @@
-import Button from '../components/UI-kit/Button/Button';
+import WButton from '../components/UI-kit/WButton/WButton';
 
 const iconNames = ['gear', 'close', 'filter'];
 
 export default {
-	component: Button,
-	title: 'Контролы/Button',
+	component: WButton,
+	title: 'Контролы/WButton',
 	argTypes: {
 		title: {
 			name: 'Текст внутри кнопки',
 			type: { name: 'string', required: false },
 			description: 'Текст',
-			defaultValue: 'Сохранить',
 			table: {
 				category: 'Внутреннее содержимое',
 				type: { summary: null },
 				defaultValue: { summary: 'Сохранить' },
 			},
-			control: {
-				type: 'text'
-			}
+			control: { type: 'text' }
 		},
 		secondary: {
 			name: 'Альтернативная кнопка',
@@ -29,9 +26,7 @@ export default {
 				type: { summary: 'Альтернативная' },
 				defaultValue: { summary: 'false' },
 			},
-			control: {
-				type: 'boolean'
-			}
+			control: { type: 'boolean' }
 		},
 		size: {
 			name: 'Размер кнопки',
@@ -39,13 +34,11 @@ export default {
 			description: 'Размеры: ',
 			table: {
 				category: 'Внешний вид',
-				type: { summary: 'small | default | big' },
-				defaultValue: { summary: 'default' },
+				type: { summary: 'small | medium | big' },
+				defaultValue: { summary: 'medium' },
 			},
-			control: {
-				type: 'select',
-				options: [ 'small', 'default', 'big' ]
-			}
+			control: { type: 'select' },
+			options: [ 'small', 'medium', 'big' ]
 		},
 		disabled: {
 			name: 'Неактивная кнопка',
@@ -56,9 +49,7 @@ export default {
 				type: { summary: 'true | false' },
 				defaultValue: { summary: 'false' },
 			},
-			control: {
-				type: 'boolean'
-			}
+			control: { type: 'boolean' }
 		},
 		prependIcon: {
 			name: 'Иконка до текста',
@@ -69,10 +60,8 @@ export default {
 				type: { summary: 'close, gear, ...' },
 				defaultValue: { summary: null },
 			},
-			control: {
-				type: 'select',
-				options: iconNames
-			}
+			control: { type: 'select' },
+			options: iconNames
 		},
 		appendIcon: {
 			name: 'Иконка после текста',
@@ -83,40 +72,37 @@ export default {
 				type: { summary: 'close, gear, ...' },
 				defaultValue: { summary: null },
 			},
-			control: {
-				type: 'select',
-				options: iconNames
-			}
+			control: { type: 'select' },
+			options: iconNames
 		},
 		iconColor: {
 			name: 'Цвет иконки',
-			type: { name: 'color', required: false },
+			type: { name: 'string', required: false },
 			description: 'Цвет',
 			table: {
 				category: 'Внутреннее содержимое',
 				type: { summary: null },
 				defaultValue: { summary: null },
 			},
-			control: {
-				type: 'color'
-			}
+			control: { type: 'color' }
 		},
 		onClick: {
 			action: 'clicked'
 		}
-	}
+	},
+	args: {
+		title: 'Сохранить'
+	},
 };
 
 const Template = (args, { argTypes }) => ({
-	components: { Button },
+	components: { WButton },
 	props: Object.keys(argTypes),
-	template: '<Button @click="onClick" v-bind="$props" />',
+	template: '<WButton @click="onClick" v-bind="$props" />',
 });
 
 export const Primary = Template.bind({});
-Primary.args = {
-
-};
+Primary.args = { };
 
 export const PrimaryDisabled = Template.bind({});
 PrimaryDisabled.args = {
@@ -145,7 +131,6 @@ PrimaryBigDisabled.args = {
 	size: 'big'
 };
 
-
 export const Secondary = Template.bind({});
 Secondary.args = {
 	secondary: true
@@ -157,4 +142,28 @@ SecondaryDisabled.args = {
 	secondary: true
 };
 
-//........................................................
+export const SecondarySmall = Template.bind({});
+SecondarySmall.args = {
+	secondary: true,
+	size: 'small'
+};
+
+export const SecondarySmallDisabled = Template.bind({});
+SecondarySmallDisabled.args = {
+	secondary: true,
+	size: 'small',
+	disabled: true
+};
+
+export const SecondaryBig = Template.bind({});
+SecondaryBig.args = {
+	secondary: true,
+	size: 'big'
+};
+
+export const SecondaryBigDisabled = Template.bind({});
+SecondaryBigDisabled.args = {
+	secondary: true,
+	size: 'big',
+	disabled: true
+};

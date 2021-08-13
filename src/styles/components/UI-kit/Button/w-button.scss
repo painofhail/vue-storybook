@@ -1,0 +1,35 @@
+.w-button {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+
+	width: auto;
+	min-height: 32px;
+
+	font-family: 'Roboto', Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: normal;
+	font-stretch: normal;
+
+	margin: 0;
+	border: none;
+	border-radius: 6px;
+	background-color: transparent;
+	cursor: pointer;
+
+	transition: all 0.5s ease-in-out;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@import '--primary/w-button--primary.scss';
+@import '--secondary/w-button--secondary.scss';
+@import '--big/w-button--big.scss';
+@import '--medium/w-button--medium.scss';
+@import '--small/w-button--small.scss';
+@import '--disabled/w-button--disabled.scss';
