@@ -11,7 +11,7 @@ const req = new XMLHttpRequest();
 		el.innerHTML = req.responseText;
 		el.querySelectorAll('[id]').forEach((icon, i) => iconNames[i] = icon.id)
 		el.remove();
-  }
+	}
 
 req.send(null);
 
