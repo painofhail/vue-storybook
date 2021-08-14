@@ -1,5 +1,19 @@
 .w-button--secondary {
-	color: #333;
-	background-color: transparent;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+	color: $w-button-secondary-text-color;
+	background-color: $w-button-secondary-background-color;
+	border-width: 1px;
+	border-style: solid;
+
+	&:hover, &:focus {
+		border-color: $w-button-secondary-border-color-hover;
+	}
+
+	&:active {
+		border-color: $w-button-secondary-border-color-active;
+	}
+
+	&:disabled {
+		border-color: $w-button-secondary-border-color-disabled;
+		color: $w-button-secondary-text-color-disabled;
+	}
 }

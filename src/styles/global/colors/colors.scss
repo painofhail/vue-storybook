@@ -1,5 +1,23 @@
 $main-color: #3F6FE2;
+$main-color-variant1: #5E87EA;
+$main-color-variant2: #2051C8;
+
 $white-color: white;
 
-$w-button-text-color: $white-color;
-$w-button-background-color: $main-color;
+$main-color-disabled: white;
+$main-color-disabled-variant1: #D9DDE7;
+$main-color-disabled-variant2: #A9B1B8;
+
+// WButton
+$w-button-primary-text-color: $white-color;
+$w-button-primary-background-color: $main-color;
+$w-button-primary-background-color-hover: $main-color-variant1;
+$w-button-primary-background-color-active: $main-color-variant2;
+$w-button-primary-background-color-disabled: $main-color-disabled-variant1;
+
+$w-button-secondary-background-color: $white-color;
+$w-button-secondary-text-color: $main-color;
+$w-button-secondary-text-color-disabled: $main-color-disabled-variant2;
+$w-button-secondary-border-color-hover: $main-color-variant1;
+$w-button-secondary-border-color-active: $main-color-variant2;
+$w-button-secondary-border-color-disabled: $main-color-disabled-variant1;

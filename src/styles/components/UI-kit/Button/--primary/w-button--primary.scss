@@ -1,4 +1,16 @@
 .w-button--primary {
-	color: $w-button-text-color;
-	background-color: $w-button-background-color;
+	color: $w-button-primary-text-color;
+	background-color: $w-button-primary-background-color;
+
+	&:hover, &:focus {
+		background-color: $w-button-primary-background-color-hover;
+	}
+
+	&:active {
+		background-color: $w-button-primary-background-color-active;
+	}
+
+	&:disabled {
+		background-color: $w-button-primary-background-color-disabled;
+	}
 }

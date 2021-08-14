@@ -91,7 +91,10 @@ export default {
 		}
 	},
 	args: {
-		title: 'Сохранить'
+		title: 'Сохранить',
+		onClick () {
+			console.log('Привет')
+		}
 	},
 };
 

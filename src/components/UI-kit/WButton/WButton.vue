@@ -1,10 +1,10 @@
 <template>
 	<button :class="classes" :disabled="disabled" @click="click">
-		<!-- <SvgIcon v-if="prependIcon" :name="prependIcon" :fill="iColor" class="mr_8" /> -->
+		<!-- <SvgIcon v-if="prependIcon" :name="prependIcon" :fill="fill" class="mr_8" /> -->
 
 		<span>{{ title }}</span>
 
-		<!-- <SvgIcon v-if="appendIcon" :name="appendIcon" :fill="iColor" class="ml_8" /> -->
+		<!-- <SvgIcon v-if="appendIcon" :name="appendIcon" :fill="fill" class="ml_8" /> -->
 	</button>
 </template>
 
@@ -37,7 +37,7 @@
 				type: String,
 				default: null
 			},
-			iconColor: {							// Цвет иконок
+			iconFill: {								// Цвет иконок
 				type: String,
 				default: null
 			}
@@ -48,12 +48,11 @@
 					'w-button': true,
 					'w-button--primary': !this.$props.secondary,
 					'w-button--secondary': this.$props.secondary,
-					[`w-button--${this.$props.size}`]: true,
-					'w-button--disabled' : this.$props.disabled
+					[`w-button--${this.$props.size}`]: true
 				}
 			},
-			iColor () {
-				return this.$props.disabled ? null : this.$props.iconColor;
+			fill () {
+				return this.$props.disabled ? null : this.$props.iconFill;
 			}
 		},
 		methods: {
