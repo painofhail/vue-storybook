@@ -30,16 +30,13 @@
 				default: false
 			},
 			prependIcon: {						// Иконка до текста кнопки
-				type: String,
-				default: null
+				type: String
 			},
 			appendIcon: {							// Иконка после текста кнопки
-				type: String,
-				default: null
+				type: String
 			},
 			iconFill: {								// Цвет иконок
-				type: String,
-				default: null
+				type: String
 			}
 		},
 		computed: {
@@ -48,7 +45,7 @@
 					'w-button': true,
 					'w-button--primary': !this.$props.secondary,
 					'w-button--secondary': this.$props.secondary,
-					[`w-button--${this.$props.size}`]: true
+					[`w-button--size-${this.$props.size}`]: true
 				}
 			},
 			fill () {

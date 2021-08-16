@@ -38,8 +38,8 @@
 			},
 			styles () {
 				return {
-					'width': this.$props.width ? this.$props.width : this.$props.height,
-					'height': this.$props.height ? this.$props.height : this.$props.width,
+					'width': !!this.$props.width ? this.$props.width : this.$props.height,
+					'height': !!this.$props.height ? this.$props.height : this.$props.width,
 					'fill': this.$props.fill,
 					'stroke': this.$props.stroke,
 					'strokeWidth': this.$props.strokeWidth
