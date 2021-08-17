@@ -105,7 +105,7 @@ const Template = (args, { argTypes }) => ({
 });
 
 export const Primary = Template.bind({});
-Primary.args = { };
+Primary.args = {};
 
 export const PrimaryDisabled = Template.bind({});
 PrimaryDisabled.args = {

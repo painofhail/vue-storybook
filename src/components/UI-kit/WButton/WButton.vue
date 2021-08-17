@@ -9,34 +9,51 @@
 </template>
 
 <script>
-
 	export default {
 		name: 'WButton',
 		props: {
 			title: {									// Текст кнопки
 				type: String,
-				default: 'Сохранить'
+				required: false,
+				default: 'Сохранить',
+				validator: value => typeof(value) === "string"
 			},
 			secondary: {							// Не основная кнопка (по умолчанию - основная)
 				type: Boolean,
+				required: false,
 				default: false,
+				validator: value => typeof(value) === "boolean"
 			},
 			size: {										// Размеры кнопки
 				type: String,
-				default: 'medium'				// small | medium | big
+				required: false,
+				default: 'medium',
+				validator: value => ['small', 'medium', 'big'].includes(value)
 			},
 			disabled: {								// Заблокированная кнопка
 				type: Boolean,
-				default: false
+				required: false,
+				default: false,
+				validator: value => typeof(value) === "boolean"
+
 			},
 			prependIcon: {						// Иконка до текста кнопки
-				type: String
+				type: String,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "string"
 			},
 			appendIcon: {							// Иконка после текста кнопки
-				type: String
+				type: String,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "string"
 			},
 			iconFill: {								// Цвет иконок
-				type: String
+				type: String,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "string"
 			}
 		},
 		computed: {

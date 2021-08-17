@@ -11,7 +11,7 @@
 			title: {
 				type: String,
 				required: false,
-				default: ''
+				default: 'Тэг'
 			},
 			// Тип тэга
 			type: {

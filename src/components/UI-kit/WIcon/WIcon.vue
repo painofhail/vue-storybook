@@ -5,29 +5,43 @@
 </template>
 
 <script>
-
 	export default {
 		name: 'WIcon',
 		props: {
 			name: {								// Имя иконки
 				type: String,
 				required: true,
-				default: 'icon',
+				validator: value => typeof(value) === "string"
 			},
 			width: {							// Ширина иконки (если не указывать, то = высоте)
-				type: Number
+				type: Number,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "number"
 			},
 			height: {							// Высота иконки (если не указывать, то = ширине)
-				type: Number
+				type: Number,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "number"
 			},
 			fill: {								// Цвет (заполнение) иконки
-				type: String
+				type: String,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "string"
 			},
 			stroke: {							// Цвет обводки иконки
 				type: String,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "string"
 			},
 			strokeWidth: {				// Толщина обводки иконки
-				type: Number
+				type: Number,
+				required: false,
+				default: null,
+				validator: value => typeof(value) === "number"
 			},
 		},
 		computed: {

@@ -4,14 +4,14 @@ import WIcon from '../components/UI-kit/WIcon/WIcon';
 let iconNames = [];
 
 const req = new XMLHttpRequest();
-	req.open('GET', '../../dist/images/svg/sprite.svg', true);
+req.open('GET', '../../dist/images/svg/sprite.svg', true);
 
-	req.onreadystatechange = function () {
-		const el = document.createElement('div');
-		el.innerHTML = req.responseText;
-		el.querySelectorAll('[id]').forEach((icon, i) => iconNames[i] = icon.id)
-		el.remove();
-	}
+req.onreadystatechange = () => {
+	const el = document.createElement('div');
+	el.innerHTML = req.responseText;
+	el.querySelectorAll('[id]').forEach((icon, i) => iconNames[i] = icon.id)
+	el.remove();
+}
 
 req.send(null);
 
