@@ -1,0 +1,8 @@
+.w-badge--type-warning {
+	color: $w-badge-warning-text-color;
+	background-color: $w-badge-warning-background-color;
+
+	&:hover {
+		background-color: $w-badge-warning-background-color-hover;
+	}
+}

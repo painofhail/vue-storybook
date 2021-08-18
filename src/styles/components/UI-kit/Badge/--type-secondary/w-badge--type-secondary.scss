@@ -1,0 +1,8 @@
+.w-badge--type-secondary {
+	color: $w-badge-secondary-text-color;
+	background-color: $w-badge-secondary-background-color;
+
+	&:hover {
+		background-color: $w-badge-secondary-background-color-hover;
+	}
+}

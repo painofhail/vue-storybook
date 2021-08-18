@@ -5,7 +5,6 @@
 	align-items: center;
 
 	width: auto;
-	min-height: 32px;
 
 	font-family: 'Roboto', Arial, sans-serif;
 	line-height: 1.5;
@@ -33,8 +32,8 @@
 	}
 }
 
-@import '--primary/w-button--primary.scss';
-@import '--secondary/w-button--secondary.scss';
+@import '--type-primary/w-button--type-primary.scss';
+@import '--type-secondary/w-button--type-secondary.scss';
 @import '--size-big/w-button--size-big.scss';
 @import '--size-medium/w-button--size-medium.scss';
 @import '--size-small/w-button--size-small.scss';

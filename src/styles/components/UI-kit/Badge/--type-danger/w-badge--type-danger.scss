@@ -1,0 +1,8 @@
+.w-badge--type-danger {
+	color: $w-badge-danger-text-color;
+	background-color: $w-badge-danger-background-color;
+
+	&:hover {
+		background-color: $w-badge-danger-background-color-hover;
+	}
+}

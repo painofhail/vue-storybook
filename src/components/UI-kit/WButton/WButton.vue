@@ -60,8 +60,8 @@
 			classes () {
 				return {
 					'w-button': true,
-					'w-button--primary': !this.$props.secondary,
-					'w-button--secondary': this.$props.secondary,
+					'w-button--type-primary': !this.$props.secondary,
+					'w-button--type-secondary': this.$props.secondary,
 					[`w-button--size-${this.$props.size}`]: true
 				}
 			},

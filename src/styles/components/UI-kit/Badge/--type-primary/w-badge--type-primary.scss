@@ -1,0 +1,8 @@
+.w-badge--type-primary {
+	color: $w-badge-primary-text-color;
+	background-color: $w-badge-primary-background-color;
+
+	&:hover {
+		background-color: $w-badge-primary-background-color-hover;
+	}
+}
