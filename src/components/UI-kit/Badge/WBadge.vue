@@ -1,5 +1,5 @@
 <template>
-	<span :class="classes" :style="style">{{ title }}</span>
+	<span :class="classes" :style="styles">{{ title }}</span>
 </template>
 
 <script>
@@ -39,7 +39,7 @@
 					[`w-badge--type-${this.$props.type}`]: true
 				}
 			},
-			style () {
+			styles () {
 				return {
 					backgroundColor: this.$props.bgColor,
 				};

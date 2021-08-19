@@ -1,54 +1,54 @@
 <template>
-	<span :class="classes" :style="style">{{ title }}</span>
+	<span :class="classes" :style="styles">{{ title }}</span>
 </template>
 
 <script>
-
 	export default {
 		name: 'WText',
 		props: {
-			// Текст
-			title: {
+			title: {							// Текст
 				type: String,
 				required: false,
-				default: ''
+				default: 'Текст',
+				validator: value => typeof(value) === "string"
 			},
-			// Тип текста
-			type: {
+			type: {								// Тип текста
 				type: String,
 				required: false,
-				default: 'default'	// default | secondary | warning
+				default: 'primary',
+				validator: value => ['primary', 'secondary', 'warning'].includes(value)
 			},
-			// Размер
-			size: {
+			size: {								// Размер текста
 				type: String,
 				required: false,
-				default: 'default'	// very-small | small | default
+				default: 'medium',
+				validator: value => ['very-small', 'small', 'medium', 'big'].includes(value)
 			},
-			weight: {
+			weight: {							// Толщина текста
 				type: String,
 				required: false,
-				default: 'normal'	// normal | semi-bold | bold
+				default: 'normal',
+				validator: value => ['normal', 'semi-bold', 'bold'].includes(value)
 			},
-			// Цвет
-			color: {
+			color: {							// Цвет текста
 				type: String,
 				required: false,
-				default: null
+				default: null,
+				validator: value => typeof(value) === "string"
 			}
 		},
 		computed: {
-			classes() {
+			classes () {
 				return {
 					'w-text': true,
-					[`w-text_${this.$props.type}`]: true,
-					[`w-text_${this.$props.size}`]: true,
-					[`w-text_${this.$props.weight}`]: true
+					[`w-text--type-${this.$props.type}`]: true,
+					[`w-text--size-${this.$props.size}`]: true,
+					[`w-text--weight-${this.$props.weight}`]: true
 				}
 			},
-			style() {
+			styles () {
 				return {
-					color: this.color,
+					color: this.$props.color,
 				};
 			},
 		}

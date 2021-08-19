@@ -1,3 +1,5 @@
+$main-text-color: #232E42;
+
 $main-color: #3F6FE2;
 $main-color-variant1: #5E87EA;
 $main-color-variant2: #2051C8;
@@ -38,3 +40,8 @@ $w-badge-danger-background-color-hover: #E3D4D4;
 $w-badge-warning-text-color: #D59E12;
 $w-badge-warning-background-color: #FFEFC6;
 $w-badge-warning-background-color-hover: #efdfb6;
+
+// WText
+$w-text-primary-text-color: $main-text-color;
+$w-text-secondary-text-color: #768A9C;
+$w-text-danger-text-color: #FF4060;

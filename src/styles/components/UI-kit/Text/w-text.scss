@@ -1,0 +1,19 @@
+.w-text {
+	line-height: 1.5;
+	font-style: normal;
+	letter-spacing: normal;
+	font-stretch: normal;
+}
+
+@import '--size-very-small/w-text--size-very-small.scss';
+@import '--size-small/w-text--size-small.scss';
+@import '--size-medium/w-text--size-medium.scss';
+@import '--size-big/w-text--size-big.scss';
+
+@import '--type-primary/w-text--type-primary.scss';
+@import '--type-secondary/w-text--type-secondary.scss';
+@import '--type-warning/w-text--type-warning.scss';
+
+@import '--weight-bold/w-text--weight-bold.scss';
+@import '--weight-normal/w-text--weight-normal.scss';
+@import '--weight-semi-bold/w-text--weight-bold.scss';
