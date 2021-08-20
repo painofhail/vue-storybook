@@ -1,0 +1,19 @@
+.w-palette {
+	display: flex;
+	flex-flow: row wrap;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		height: 250px;
+		width: 250px;
+
+		margin: 20px;
+	}
+
+	&__value {
+		color: black;
+	}
+}

@@ -1,14 +1,26 @@
-// import colors from '../styles/helpers/colors.scss';
+import Palette from '../components/UI-kit/Palette/Palette';
 
-// export default {
-//   title: 'Палитра'
-// };
+import colors from '../styles/global/colors/colors.scss';
 
-// const Template = (args) => ({
-//   template: '<div>Test</div>',
-// });
+export default {
+	component: Palette,
+	title: 'Палитра',
+	args: {
+		palette: Object.entries(colors).map((i, index) => {
+			return {
+				id: index,
+				name: i[0],
+				value: i[1]
+			};
+		})
+	}
+};
 
-// export const Primary = Template.bind({});
-// Primary.args = {
+const Template = (args) => ({
+	components: { Palette },
+	props: args,
+	template: '<Palette :palette="$props.palette" />'
+});
 
-// };
+export const PaletteMain = Template.bind({});
+PaletteMain.args = {};
