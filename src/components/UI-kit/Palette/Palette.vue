@@ -1,11 +1,8 @@
 <template>
 	<div class="w-palette">
-		<div
-			class="w-palette__item"
-			v-for="color in colors"
-			:style="{'background-color': color.value}"
-			:key="color.id">
-			<span class="w-palette__value">{{ color.value }}</span>
+		<div class="w-palette__item" :style="{'background-color': color.value}"	v-for="color in palette" :key="color.id">
+			<p class="w-palette__value">{{ color.name }}</p>
+			<p class="w-palette__value">{{ color.value }}</p>
 		</div>
 	</div>
 </template>
@@ -19,12 +16,6 @@
 				required: false,
 				default: () => [],
 				validator: () => true
-			}
-		},
-		computed: {
-			colors () {
-				console.log(this.$props.palette);
-				return this.$props.palette;
 			}
 		}
 	}

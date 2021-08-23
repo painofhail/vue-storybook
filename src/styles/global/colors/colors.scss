@@ -49,5 +49,10 @@ $w-text-danger-text-color: #FF4060;
 // for Storybook Palette
 :export {
 	main-color: $main-color;
+	main-color-variant1: $main-color-variant1;
+	main-color-variant2: $main-color-variant2;
 	white-color: $white-color;
+	main-color-disabled: $main-color-disabled;
+	main-color-disabled-variant1: $main-color-disabled-variant1;
+	main-color-disabled-variant2: $main-color-disabled-variant2;
 }

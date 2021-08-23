@@ -4,16 +4,20 @@
 
 	&__item {
 		display: flex;
+		flex-flow: column wrap;
 		align-items: center;
 		justify-content: center;
 
-		height: 250px;
-		width: 250px;
+		min-height: 200px;
+		min-width: 200px;
 
-		margin: 20px;
+		margin: 15px;
+
+		border: 1px solid black;
 	}
 
 	&__value {
 		color: black;
+		margin: 0;
 	}
 }
