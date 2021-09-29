@@ -1,6 +1,6 @@
 <template>
 	<svg :class="classes"	:style="styles">
-		<use v-bind="{ 'href': 'dist/images/svg/sprite.svg#' + name }" />
+		<use v-bind="{ 'href': 'dist/images/svg/sprite.svg#' + $props.name }" />
 	</svg>
 </template>
 

@@ -41,5 +41,5 @@ root = true
 	trim_trailing_whitespace = false
 
 # rules for .html
-[*.html]
+[*.{html,scss}]
 	max_line_length = off

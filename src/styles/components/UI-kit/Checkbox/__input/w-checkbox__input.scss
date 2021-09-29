@@ -1,0 +1,28 @@
+.w-checkbox__input {
+	// display: none - плохо, т.к. элемент по факту не удаляется, а скрывается
+	appearance: none;
+
+	position: absolute;
+
+	&:not(:checked) + .w-checkbox__box {
+		border: 1px solid rgba(115, 127, 139, 1);
+	}
+
+	&:checked + .w-checkbox__box {
+		background-color: #3F6FE2;
+		background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.3767 0.30497C10.5955 0.473398 10.6364 0.787333 10.4679 1.00616L4.5488 8.6966C4.39092 8.90172 4.08487 8.9112 3.9146 8.71623L3.87423 8.67L0.328971 4.61047C0.147328 4.40247 0.168689 4.08661 0.37668 3.90497C0.584672 3.72333 0.900533 3.74469 1.08218 3.95268L4.19487 7.51691L9.67549 0.39623C9.84392 0.1774 10.1579 0.136542 10.3767 0.30497Z' fill='white'/%3E%3C/svg%3E%0A");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-origin: content-box;
+	}
+
+	&:focus + .w-checkbox__box,
+	&:hover + .w-checkbox__box {
+		box-shadow: 0px 1px 2px 0px rgba(12, 38, 102, 0.2);
+	}
+
+	&:disabled + .w-checkbox__box {
+		border: none;
+		background-color: #eceff6;
+	}
+}
