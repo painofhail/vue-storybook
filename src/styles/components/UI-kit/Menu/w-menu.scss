@@ -1,0 +1,10 @@
+.w-menu {
+	width: 150px;
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+@import "__submenu/w-menu__submenu.scss";
+@import "__item/w-menu__item.scss";

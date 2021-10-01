@@ -1,0 +1,11 @@
+.w-menu__submenu {
+	display: none;
+	position: absolute;
+	right: -150px;
+	top: 0px;
+	width: 150px;
+
+	&.w-menu__submenu--active {
+		display: block;
+	}
+}

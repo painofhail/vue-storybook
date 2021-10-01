@@ -1,0 +1,21 @@
+.w-menu__item {
+	background-color:#574f4f;
+
+	position: relative;
+
+	cursor: pointer;
+
+	a, span {
+		display: block;
+		padding: 5px 10px;
+		color: #EEE;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	span.active {
+		background-color: #F03861;
+	}
+}

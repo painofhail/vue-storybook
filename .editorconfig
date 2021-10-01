@@ -19,7 +19,7 @@ root = true
 	quote_type = single
 
 	# Max line length
-	max_line_length = 120
+	# max_line_length = 120
 
 	# Unix-style newlines with a newline ending every file
 	insert_final_newline = true
@@ -39,7 +39,3 @@ root = true
 [*.md]
 	# do not delete spaces
 	trim_trailing_whitespace = false
-
-# rules for .html
-[*.{html,scss}]
-	max_line_length = off
